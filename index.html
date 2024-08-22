@@ -7,44 +7,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>GIF como Background</title>
+    <title>hub distrito 28</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <header>
         <img class="logo-header" src="2.png" alt="Logo do Hub de inovação">
-        <ul>
-            <li>VEM PRO <span class="letter-h">H</span><span class="letter-u">U</span><span class="letter-b">B</span></li>
-            <li>SOBRE</li>
-            <li>PARCEIROS</li>
+        <div class="menu-icon" aria-label="Menu" aria-expanded="false" aria-controls="navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navigation" role="navigation">
+            <li><a href="#hub">VEM PRO <span class="letter-h">H</span><span class="letter-u">U</span><span class="letter-b">B</span></a></li>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#parceiros">PARCEIROS</a></li>
         </ul>
     </header>
     <div class="full-page-background"></div>
     <main>
-        <div class="card-page">
+        <div id="hub" class="card-page">
             <h2>Vem pro <span class="letter-h">H</span><span class="letter-u">U</span><span class="letter-b">B</span></h2>
             <p>Faça parte de uma comunidade de valor</p>
             <div class="cards">
-                <div id="border-H">
+                <a href="https://agifes.ifes.edu.br/editais/" id="border-H">
                     <p>Quero ser uma Startup do HUB</p>
-                </div>
-                <div id="border-U">
+                </a>
+                <a href="./parceiro.html" id="border-U">
                     <p>Quero ser um parceiro do HUB</p>
-                </div>
-                <div id="border-B">
+                </a>
+                <a href="https://forms.gle/QRSjywqBJFhYLWcP8" id="border-B">
                     <p>Quero trabalhar em uma Startup do HUB</p>
-                </div>
+                </a>
             </div>
         </div>
     </main>
 
-    <div class="quem-somos">
+    <div id="sobre" class="quem-somos">
         <h3>Quem somos</h3>
         <p>O Hub de Inovação Distrito 28 é uma iniciativa do Ifes Campus Cachoeiro de Itapemirim, projetada para ser um centro de excelência em inovação e empreendedorismo. Localizado no coração econômico da cidade, o Distrito 28 oferece um espaço estratégico para a conexão entre instituições de ensino, empresas, governos e startups.</p>
         <p>Este hub visa facilitar o desenvolvimento de soluções tecnológicas inovadoras, atendendo às demandas do ecossistema local e impulsionando o crescimento econômico da região. No cenário atual, o Distrito 28 atua como um catalisador para a criação de novos negócios e para a transformação de ideias em projetos concretos, proporcionando um ambiente fértil para a colaboração e para o surgimento de inovações que atendam às necessidades locais e regionais.</p>
     </div>
 
-    <div class="container-parceiros">
+    <div id="parceiros" class="container-parceiros">
         <div class="parceiros">
             <p>Conheça os parceiros do Hub Distrito 28, colaborando juntos para fomentar a inovação e o empreendedorismo na nossa região.</p>
             <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,5 +98,29 @@
             <p>HUB distrito 28     © Todos os direitos reservados. 2024</p>
         </div>
     </footer>
+
+    <button id="backToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Obtém o botão
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Mostra o botão com suavidade quando o usuário desce 100px da parte superior da página
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+
+        // Função para rolar a página de volta ao topo
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'}); // Rola suavemente para o topo
+        }
+    </script>
+
 </body>
 </html>
